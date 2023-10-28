@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/finches/finch-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="finch-container">
+  <div class="finch-img">
+    <img 
+      src="{% static 'images/finch.png' %}" 
+      alt="A finch"
+    >
+  </div>
+  <div class="finch-details">
+    <h2 class="card-title">{{ finch.name }}</h2>
+    <p>A {{ finch.species }} with vibrant {{ finch.color }} plumage</p>
+    <p><small>They have a wingspan of {{ finch.wingspan }} centimeters and an average lifespan of {{ finch.lifespan }} years</small></p>
+    {% if finch.is_migratory == True %}
+      <p><small>{{ finch.name }} prefers to embark on seasonal journeys to different regions, <br> as migratory behavior is a characteristic trait of {{ finch.species }}</small></p>
+    {% else %}
+      <p><small>{{ finch.name }} prefers to stay in one location throughout the year</small></p>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}
