@@ -96,7 +96,13 @@ nav li {
 .header-logo-container {
   margin: auto;
   padding: 10px 20px 0;
-  max-width: 500px;
+  max-width: 50px;
+}
+
+.header-logo-container img {
+  max-width: 80px;
+  max-height: 80px;
+  padding-bottom: 60px;
 }
 
 .page-header {
