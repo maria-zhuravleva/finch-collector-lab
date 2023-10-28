@@ -7,3 +7,6 @@ class Finch(models.Model):
   wingspan = models.FloatField()
   lifespan = models.IntegerField()
   is_migratory = models.BooleanField(default=False)
+
+  def __str__(self):
+    return self.name
