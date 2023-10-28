@@ -23,8 +23,20 @@ main > section {
   max-width: 375px;
 }
 
-.cat-container {
+.logo-container h2 {
+  font-size: 30px;
+  font-style: italic;
+  border-top: solid 2px black;
+  padding-top: 5px;
+}
+
+.finch-container {
   width: 80%;
+}
+
+.finch-container img {
+  max-width: 350px;
+  max-height: 350px;
 }
 
 .login {
