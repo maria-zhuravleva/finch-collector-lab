@@ -69,3 +69,9 @@ class ToyDelete(DeleteView):
 def assoc_toy(request, finch_id, toy_id):
   Finch.objects.get(id=finch_id).toys.add(toy_id)
   return redirect('finch-detail', finch_id=finch_id)
+
+def remove_toy(request, finch_id, toy_id):
+    finch = Finch.objects.get(id=finch_id)
+    toy = Toy.objects.get(id=toy_id)
+    finch.toys.remove(toy)    
+    return redirect('finch-detail', finch_id=finch_id)
