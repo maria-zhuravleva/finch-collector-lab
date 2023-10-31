@@ -27,6 +27,10 @@
     {% else %}
       <p><small>{{ finch.name }} prefers to stay in one location throughout the year</small></p>
     {% endif %}
+    <div class="finch-actions">
+      <a href="{% url 'finch-update' finch.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'finch-delete' finch.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
